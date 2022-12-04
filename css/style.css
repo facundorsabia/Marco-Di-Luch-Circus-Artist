@@ -488,8 +488,15 @@ a:focus {
 .about {
     position: relative;
     width: 100%;
-    margin: -45px 0 45px 0;
+    margin: -10px 0 45px 0;
 }
+
+@media (max-width: 767.98px) {
+    .about{
+        margin: -48px 0 45px 0;
+    }
+}
+
 
 .about .col-lg-6 {
     padding: 0;
