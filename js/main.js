@@ -122,4 +122,3 @@ function mostrar(){
 let displayCV = document.getElementById("displayCV");
 
 displayCV.addEventListener("click", mostrar);
-  
