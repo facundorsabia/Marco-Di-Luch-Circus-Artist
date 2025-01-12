@@ -84,6 +84,30 @@ iframes.forEach(iframe => observer.observe(iframe));
         return false;
     });
 
+  //
+
+//Close nav menu on mobile when clicking items:
+const navbarToggle = document.querySelector('.navbar-toggler');
+const navbarCollapse = document.getElementById('navbarCollapse');
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+// Añadir evento de clic a cada enlace de navegación
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Verificar si el menú está abierto y cerrarlo
+        if (navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+        }
+    });
+});
+
+// Si el menú está abierto, al hacer clic fuera también se cierra
+navbarToggle.addEventListener('click', function() {
+    if (navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+    }
+});
+
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
