@@ -87,7 +87,6 @@ iframes.forEach(iframe => observer.observe(iframe));
   //
 
 //Close nav menu on mobile when clicking items:
-const navbarToggle = document.querySelector('.navbar-toggler');
 const navbarCollapse = document.getElementById('navbarCollapse');
 const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
@@ -99,13 +98,6 @@ navLinks.forEach(link => {
             navbarCollapse.classList.remove('show');
         }
     });
-});
-
-// Si el menú está abierto, al hacer clic fuera también se cierra
-navbarToggle.addEventListener('click', function() {
-    if (navbarCollapse.classList.contains('show')) {
-        navbarCollapse.classList.remove('show');
-    }
 });
 
     // Sticky Navbar
